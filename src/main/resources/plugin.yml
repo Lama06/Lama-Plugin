@@ -14,3 +14,8 @@ commands:
     description: Aktiviert oder Deaktiviert den sich erhöhenden Spielercounter
   motd:
     description: Aktiviert oder Deaktiviert die zufällige Server Info
+  jacob:
+    description: Aktiviert oder Deaktiviert den Jacob Modus
+  lamaserver:
+    description: Gibt die aktuelle Version des LamaPlugins aus
+    aliases: lamaplugin

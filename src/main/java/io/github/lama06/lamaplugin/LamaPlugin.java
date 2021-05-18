@@ -12,6 +12,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import io.github.lama06.lamaplugin.command.CommandManager;
 import io.github.lama06.lamaplugin.features.AntiCreeperFeature;
 import io.github.lama06.lamaplugin.features.JaNeinCommand;
+import io.github.lama06.lamaplugin.features.JacobFeature;
+import io.github.lama06.lamaplugin.features.LamaServerCommand;
 import io.github.lama06.lamaplugin.features.PlayerCountFeature;
 import io.github.lama06.lamaplugin.features.RandomMotdFeature;
 import io.github.lama06.lamaplugin.vote.VoteManager;
@@ -27,12 +29,16 @@ public final class LamaPlugin extends JavaPlugin {
     public JaNeinCommand jaNeinCommand = new JaNeinCommand(this);
     public PlayerCountFeature playerCountFeature = new PlayerCountFeature(this);
     public RandomMotdFeature randomMotdFeature = new RandomMotdFeature(this);
+    public JacobFeature jacobFeature = new JacobFeature(this);
+    public LamaServerCommand lamaServerCommand = new LamaServerCommand(this);
 
     public void registerFeatures() {
         commands.register(antiCreeperFeature);
         commands.register(jaNeinCommand);
         commands.register(playerCountFeature);
         commands.register(randomMotdFeature);
+        commands.register(jacobFeature);
+        commands.register(lamaServerCommand);
 
         PluginManager plugins = Bukkit.getPluginManager();
 
@@ -41,6 +47,7 @@ public final class LamaPlugin extends JavaPlugin {
         plugins.registerEvents(antiCreeperFeature, this);
         plugins.registerEvents(playerCountFeature, this);
         plugins.registerEvents(randomMotdFeature, this);
+        plugins.registerEvents(jacobFeature, this);
     }
 
     @Override
