@@ -1,0 +1,16 @@
+name: LamaPlugin
+main: io.github.lama06.lamaplugin.LamaPlugin
+version: ${version}
+description: Das Plugin des Lama Servers
+api-version: 1.16
+author: Lama06
+commands:
+  ichmagkeinecreeper:
+    description: Aktiviert oder Deaktiviert das explodieren von Ceepern
+    aliases: creepersindböse
+  janein:
+    description: Startet eine Ja Nein Abstimmung
+  spielercounter:
+    description: Aktiviert oder Deaktiviert den sich erhöhenden Spielercounter
+  motd:
+    description: Aktiviert oder Deaktiviert die zufällige Server Info
